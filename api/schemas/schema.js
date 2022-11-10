@@ -8,6 +8,7 @@ import pin from './pin'
 import comment from './comment'
 import postedBy from './postedBy'
 import save from './save'
+import category from './category'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,5 +23,6 @@ export default createSchema({
     comment,
     postedBy,
     save,
+    category,
   ]),
 })
