@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Header = () => {
+const CreatePin = () => {
     return (
         <div>
-            Header
+            Create Pin
         </div>
     )
 }
 
-export default Header
+export default CreatePin
