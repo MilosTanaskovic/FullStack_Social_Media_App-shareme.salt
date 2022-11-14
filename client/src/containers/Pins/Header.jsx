@@ -12,22 +12,27 @@ const Header = ({searchTerm, setSearchTerm, user}) => {
                 setSearchTerm={setSearchTerm}
             />
             <div className="flex gap-3">
-                <UserDisplay
-                    user={user}
-                    classes={'hidden md:block'}
-                >
-                        <img 
-                            src={user.image}
-                            alt="user-pic"
-                            className="w-14 h-12 rounded-lg"
-                        />
-                </UserDisplay>
-                <CreatePinIcon
-                    href={"/create-pin"}
-                    classes={'bg-black text-white rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center'}
-                >
-                    <IoMdAdd />
-                </CreatePinIcon>
+                {user && (
+                    <>
+                    <UserDisplay
+                        user={user}
+                        classes={'hidden md:block'}
+                    >
+                            <img 
+                                src={user?.image}
+                                alt="user-pic"
+                                className="w-14 h-12 rounded-lg"
+                            />
+                    </UserDisplay>
+                    <CreatePinIcon
+                        href={"/create-pin"}
+                        classes={'bg-black text-white rounded-lg w-12 h-12 md:w-14 md:h-12 flex justify-center items-center'}
+                    >
+                        <IoMdAdd />
+                    </CreatePinIcon>
+                    </>
+                )}
+                
             </div>
         </div>
     )

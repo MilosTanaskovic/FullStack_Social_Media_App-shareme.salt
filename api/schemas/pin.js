@@ -44,7 +44,8 @@ export default {
         {
             name: 'save',
             title: 'Save',
-            type: 'save',
+            type: 'array',
+            of: [{ type: 'save'}],
         },
         {
             name: 'comments',

@@ -7,6 +7,7 @@ import { Logo } from '../components';
 import logo from '../assets/logo.png';
 import { userQuery } from '../utils/data';
 import { client } from '../client';
+import { userLocalStorageFetch } from '../utils/userLocalStorageFetch';
 
 const Home = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -14,8 +15,9 @@ const Home = () => {
 
     const scrollRef = useRef(null);
 
-    const userInfo = localStorage.getItem('user') !== 'undefine' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();  
-    console.log(userInfo)
+    const userInfo = userLocalStorageFetch();
+
+    console.log('localStorage User:', userInfo)
 
     useEffect(() => {
         const query = userQuery(userInfo?.jti);
