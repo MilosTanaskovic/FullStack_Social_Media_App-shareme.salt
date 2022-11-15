@@ -11,7 +11,7 @@ import { userLocalStorageFetch } from '../utils/userLocalStorageFetch';
 
 const Home = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState();
 
     const scrollRef = useRef(null);
 
@@ -54,7 +54,6 @@ const Home = () => {
                         />
                     </Link>
                     <Link to={`user-profile/${user?._id}`}>
-                        {/** UserProfileLogo -> compon */}
                         <img
                             src={user?.image}
                             alt="user-pic"

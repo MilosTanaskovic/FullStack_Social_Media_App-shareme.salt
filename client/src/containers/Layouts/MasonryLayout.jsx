@@ -19,7 +19,7 @@ const MasonryLayout = ({pins}) => {
         >
             {pins?.map((pin) => (
                 <Pin 
-                    key={pin._id}
+                    key={pin?._id}
                     pin={pin}
                     className="w-max"
                 />

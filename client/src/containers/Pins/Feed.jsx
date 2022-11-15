@@ -36,7 +36,7 @@ const Feed = () => {
 
     if(loading) return <Spinner message={`We are adding new ideas to your feed!`} />
     
-    console.log(categoryId)
+    console.log('categoryId: ',categoryId)
     return (
         <div>
             {pins && <MasonryLayout pins={pins} />}

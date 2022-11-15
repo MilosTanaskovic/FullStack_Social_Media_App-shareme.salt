@@ -17,7 +17,7 @@ const Pin = ({pin}) => {
 
     const user = userLocalStorageFetch();
     
-    let alreadySaved = !!(save?.filter((item) => item.postedBy._id  === user.jti))?.length
+    let alreadySaved = !!(save?.filter((item) => item?.postedBy?._id  === user?.jti))?.length
 
     const handleSavePin = (pinId) => {
         if(!alreadySaved) {
@@ -73,7 +73,7 @@ const Pin = ({pin}) => {
                         <div className="flex items-center justify-between">
                             <div className="flex gap-2">
                                 <a
-                                    href={`${image.asset.url}?dl=`}
+                                    href={`${image?.asset?.url}?dl=`}
                                     download
                                     onClick={(e) => e.stopPropagation()}
                                     className="bg-white w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
@@ -87,7 +87,7 @@ const Pin = ({pin}) => {
                                     type="button"
                                     className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
                                 >
-                                    {save.length} Saved
+                                    {save?.length} Saved
                                 </button>
                             ): (
                                 <button
@@ -98,12 +98,12 @@ const Pin = ({pin}) => {
                                     }}
                                     className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
                                 >
-                                   {save.length} {savingPost ? 'Saving' : 'Save'}
+                                   {save?.length} {savingPost ? 'Saving' : 'Save'}
                                 </button>
                             )}
                         </div>
                         <div className="flex justify-between items-center gap-2 w-full">
-                            {destination.slice(8).length > 0 ? (
+                            {destination?.slice(8).length > 0 ? (
                                 <a
                                     href={destination}
                                     target="_blank"
@@ -111,11 +111,11 @@ const Pin = ({pin}) => {
                                     rel="noreferrer"
                                 >
                                     <BsFillArrowUpRightCircleFill />
-                                    {destination.slice(8, 17)}...
+                                    {destination?.slice(8, 17)}...
                                 </a>
                             ): undefined}
 
-                            {postedBy._id === user.jti && (
+                            {postedBy?._id === user?.jti && (
                                 <button
                                     type="button"
                                     onClick={(e) => {
