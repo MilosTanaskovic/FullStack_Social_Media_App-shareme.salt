@@ -1,10 +1,10 @@
 import React from 'react'
-import { GoogleSignIn } from '../components'
+import { GoogleLogin } from '../components'
 
 const Register = () => {
     return (
         <>
-            <GoogleSignIn />
+            <GoogleLogin />
         </>
     )
 }

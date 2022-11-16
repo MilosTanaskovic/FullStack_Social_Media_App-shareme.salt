@@ -69,7 +69,7 @@ const SideBar = ({closeToggle, user}) => {
 
             {user && (
                 <UserDisplay
-                    user={user}
+                    href={`/user-profile/${user._id}`}
                     handleCloseSidebar={handleCloseSidebar}
                     classes={'flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3'}
                 >

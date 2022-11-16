@@ -12,6 +12,14 @@ export default {
             name: 'image',
             title: 'Image',
             type: 'string'
+        },
+        {
+            name: 'userBackgroundImg',
+            title: 'User Background Img',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
         }
     ]
 }

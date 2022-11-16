@@ -1,12 +1,12 @@
 import React from 'react';
 //import GoogleLogin from 'react-google-login';
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin as GoogleLI } from '@react-oauth/google';
 import {useNavigate} from 'react-router-dom';
 import jwt_decode from "jwt-decode";
 import {FcGoogle} from 'react-icons/fc';
 import { client } from '../client';
 
-const GoogleSignIn = () => {
+const GoogleLogin = () => {
     const navigate = useNavigate();
 
     const handleResponseGoogle = (credentialResponse) => {
@@ -52,7 +52,7 @@ const GoogleSignIn = () => {
                 onFailure={handleResponseGoogle}
                 cookiePolicy="single_host_origin"
                 />*/}
-                <GoogleLogin
+                <GoogleLI
                     onSuccess={handleResponseGoogle}
                     onError={handleResponseGoogle}
                 />
@@ -60,4 +60,4 @@ const GoogleSignIn = () => {
     )
 }
 
-export default GoogleSignIn
+export default GoogleLogin
