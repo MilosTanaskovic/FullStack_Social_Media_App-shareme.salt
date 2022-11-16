@@ -15,6 +15,7 @@ const Header = ({searchTerm, setSearchTerm, user}) => {
                 {user && (
                     <>
                     <UserDisplay
+                        href={`/user-profile/${user?._id}`}
                         user={user}
                         classes={'hidden md:block'}
                     >
